@@ -17,7 +17,11 @@ class Singer
 		for ($i = 99; $i > 1; $i--)
 		{
 			$song[] = sprintf('%d bottles of beer on the wall, %d bottles of beer.', $i, $i);
-			$song[] = sprintf('Take one down and pass it around, %d bottles of beer on the wall.', $i-1);
+			$song[] = sprintf(
+				'Take one down and pass it around, %d %s of beer on the wall.',
+				$i-1,
+				$i == 2 ? 'bottle' : 'bottles'
+			);
 		}
 
 		$song[] = '1 bottle of beer on the wall, 1 bottle of beer.';
