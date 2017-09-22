@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * @package Ekkinox\KataBottles\Test\Unit
  */
-class ShelterTest extends TestCase
+class SingerTest extends TestCase
 {
     /**
      * @covers \Ekkinox\KataBottles\Singer
@@ -17,9 +17,7 @@ class ShelterTest extends TestCase
     {
         $subject = new Singer();
 
-        $song = $subject->sing();
-
-        $this->assertSame($this->getExpectedSong(), $song);
+        $this->assertSame($this->getExpectedSong(), $subject->sing());
     }
 
 	/**
